@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import img from "../../assets/images.svg";
 import "./index.css";
 
-function Header() {
+function Header({ likeCount }) {
   const [likes, setLikes] = useState(0);
 
   return (
@@ -35,7 +35,7 @@ function Header() {
               onClick={() => setLikes(likes + 1)}
             />
             <div className="header__right_title">
-              <span>{likes}</span>
+              <span>{likeCount}</span>
               <p>likes</p>
             </div>
           </div>

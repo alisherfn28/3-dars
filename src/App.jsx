@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 import data from "./assets/data.json";
-import Header from "./components/Header/index.jsx";
+import Header from "./components/Header";
 
 function App() {
-  // Like qilish funksionalligi uchun state
   const [likeMovie, setLikeMovie] = useState([]);
 
-  // Like tugmasini bosganda ishlaydigan funksiya
   const handleClickLike = (id) => {
     if (likeMovie.includes(id)) {
-      setLikeMovie(likeMovie.filter((movieId) => movieId !== id)); // Like-ni o'chirish
+      setLikeMovie(likeMovie.filter((movieId) => movieId !== id));
     } else {
-      setLikeMovie([...likeMovie, id]); // Like-ni qo'shish
+      setLikeMovie([...likeMovie, id]);
     }
   };
 
   return (
     <div>
       <Header likeCount={likeMovie.length} />
-      <div className="container movie__wrapper ">
+      <div className="container movie__wrapper">
         {data.map((movie) => (
           <div key={movie.id} className="movie__card">
             <div className="movie__wrap">
@@ -53,7 +51,7 @@ function App() {
                   <strong>Chiqarilgan sana:</strong> {movie.Released}
                 </div>
                 <div>
-                  <sstrong>Davomiyligi:</sstrong> {movie.Runtime}
+                  <strong>Davomiyligi:</strong> {movie.Runtime}
                 </div>
                 <div>
                   <strong>Janr:</strong> {movie.Genre}
