@@ -1,0 +1,28 @@
+.header_container {
+  display: flex;
+  align-items: center;
+  gap: 300px;
+}
+
+.header_left {
+  display: flex;
+  align-items: center;
+  gap: 300px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header_right {
+  display: flex;
+  align-items: center;
+}
+
+.header__right_title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
